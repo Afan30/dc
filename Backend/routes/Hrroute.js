@@ -43,7 +43,7 @@ router.get("/gethr/:hrId", async (req, res) => {
     res.status(500).json({ message: "Server Error" });
   }
 });
-
+// Get all HRs
 // HR Dashboard Route
 router.get("/hrdashboardcount/:hrId", async (req, res) => {
   try {
