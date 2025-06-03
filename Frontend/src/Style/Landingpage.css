@@ -1,0 +1,293 @@
+#landingpage {
+  
+  section {
+    padding: 60px 20px;
+    max-width: 1500px;
+    margin: auto;
+    /* border-bottom: 1px solid #141414; */
+  }
+  
+
+  
+  /* Flex Section for About & How It Works */
+  .flex-section {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 40px;
+  }
+    
+    .feature__h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #cac4c4;
+    text-align: center;
+    text-transform: uppercase;
+    }
+
+  .flex-section.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .image-wrapper, .content-wrapper {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+  
+  .content-wrapper {
+    text-align: left;
+
+    .doltec__text{
+      text-align: left;
+      font-size: 1.4rem;
+    }   
+    .about__text{
+
+      
+       .for__{
+        font-size: 1.4rem;
+        background-color: #4d4a4a;
+        display: inline;
+        padding: 5px;
+        border-radius: 5px
+         
+       }
+
+       .for__points{
+        font-size: 1.2rem;
+        margin: 15px 0;
+
+         li{
+          list-style: none;
+          margin-bottom: 5px;
+
+          i{
+            margin-right: 5px  
+          }
+        }
+       }
+       
+    }
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;  
+    border-radius: 12px;
+  }
+  
+  /* Features Section */
+  .features-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 10px;  */
+  }
+  
+  .features-section ul li {
+    background: #F8F8F8;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    flex: 1 1 40%;
+    max-width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    i{
+      font-size: 2rem;
+    }
+    strong{
+      font-size: 1.2rem;
+    }
+    p{
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 22px;
+    }
+
+  }
+  
+  
+  /* Steps in How It Works */
+  .howitwork__h2{
+    font-size: 2rem;
+    margin-bottom: -20px;
+    color: #cac4c4;
+    text-align: center;
+    text-transform: uppercase;
+    }
+
+    .howitworks__p{
+      padding: 10px;
+      text-align: center;
+       color: #cac4c4;
+    }
+
+  .steps {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .step {
+    flex: 1 1 30%;
+    background: #F8F8F8;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.3);
+
+    .step__h2{
+       text-align: center;
+       font-weight: 600;
+       /* letter-spacing: 5px; */
+       padding: 8px 0;
+    }
+    .step__p{
+      text-align: left;
+       line-height: 20px;
+       margin-left: 20px;
+    }
+  }
+
+  
+  .recrutment__footer{
+     background-color: #ffffff;
+     border-radius: 12px 12px 0 0 ;
+     color: #000000;
+     padding: 30px 10px;
+     /* margin-top: 10px; */
+     /* border-top: 1px solid #141414; */
+
+    .recruitment__footer__container{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+        .footer__heading{
+          svg{
+            width: 500px;
+            height: 300px;
+          }
+        }
+      
+      .usefull__links{
+         display: flex;
+         justify-content: center;
+         padding: 5px 0;
+         ul{
+          list-style: none;
+          display: grid;
+          gap: 20px;
+          grid-template-columns: repeat(8 , 1fr);
+
+          li {
+            transition: transform 0.3s ease;
+          }
+          
+          li:hover {
+            transform: rotate(5deg);
+          }
+         }
+      } 
+
+    }
+    .copyrights{
+      border-top: 1px solid #141414;
+      p{
+        text-align: center;
+        font-size: 15px;
+      }
+   }
+
+ 
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .flex-section,
+    .flex-section.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+        .image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;  
+    border-radius: 12px;
+  }
+
+    .recrutment__footer{
+      padding: 10px 10px;
+    }
+    .recruitment__footer__container{
+        .footer__heading{
+          svg{
+            width: 350px !important;
+            height: 250px !important;
+          }
+        }
+
+        .usefull__links{
+          text-align: center !important;
+           ul{
+            grid-template-columns: repeat(4, 1fr) !important;
+            gap: 10px !important;
+           }
+        }
+    }
+
+  
+
+    .content-wrapper {
+      text-align: center;
+
+       .about__text{
+         .for__{
+         display: block;
+          text-align: left;
+        }
+      } 
+
+        .doltec__text{
+       text-align: justify
+       
+    }
+        
+    
+
+      .for__points{
+         li{
+          text-align: left;
+
+          i{
+            margin-right: 5px
+          }
+        }
+       }
+    }
+  
+    .features-section ul li {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+  
+    .step {
+      flex: 1 1 100%;
+    }
+  }
+  
+}
+
