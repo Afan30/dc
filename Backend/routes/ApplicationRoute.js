@@ -189,8 +189,7 @@ router.put("/application/:applicationId/companyStatus", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
-router.put(
-  "/interview-application/:applicationId/companyStatus",
+router.put( "/interview-application/:applicationId/companyStatus",
   async (req, res) => {
     try {
       const { status } = req.body;
